@@ -1,3 +1,5 @@
+#### Fork of Backbone.NativeAjax that doesn't consider 404s errors
+
 Backbone.NativeAjax
 ===================
 

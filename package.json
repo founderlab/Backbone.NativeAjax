@@ -1,5 +1,5 @@
 {
-  "name": "backbone.nativeajax",
+  "name": "fl-backbone.nativeajax",
   "version": "0.4.3",
   "author": "Adam Krebs <amk528@cs.nyu.edu>",
   "description": "A Backbone.Ajax function powered by native XHR methods",
