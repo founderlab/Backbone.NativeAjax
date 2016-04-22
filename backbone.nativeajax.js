@@ -48,7 +48,6 @@
 
         var status = xhr.status;
         var data = getData(options.headers && options.headers.Accept, xhr);
-console.log('data', data)
         // Check for validity.
         if (isValid(xhr)) {
           if (options.success) options.success(data);
