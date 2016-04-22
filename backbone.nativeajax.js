@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Backbone.NativeAjax.js 0.4.3
 // ---------------
 
@@ -21,7 +22,9 @@
 
     var getData = function(accepts, xhr) {
       if (accepts == null) accepts = xhr.getResponseHeader('content-type');
-      if (xmlRe.test(accepts)) {
+      if (xhr.status === 404) {
+        return null;
+      } else if (xmlRe.test(accepts)) {
         return xhr.responseXML;
       } else if (jsonRe.test(accepts) && xhr.responseText !== '') {
         return JSON.parse(xhr.responseText);
@@ -45,7 +48,7 @@
 
         var status = xhr.status;
         var data = getData(options.headers && options.headers.Accept, xhr);
-
+console.log('data', data)
         // Check for validity.
         if (isValid(xhr)) {
           if (options.success) options.success(data);
